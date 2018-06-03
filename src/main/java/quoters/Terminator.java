@@ -1,10 +1,8 @@
 package quoters;
 
-import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
@@ -16,6 +14,7 @@ import java.util.List;
  */
 @Component
 @Qualifier("film")
+@DeprecatedClass(newClass = T1000.class)
 public class Terminator implements Quoter {
 
     private List<String> messages;
